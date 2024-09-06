@@ -1,5 +1,8 @@
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -75,6 +78,7 @@ class HomeScreen extends StatelessWidget {
               height: 178,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
+                  itemCount: 10,
                   itemBuilder: (context, idx) {
                     return Container(
                       height: 174,
@@ -212,51 +216,145 @@ class HomeScreen extends StatelessWidget {
                 color: const Color.fromRGBO(25, 33, 38, 1),
               ),
             ),
-            Expanded(child: ListView.builder(itemBuilder: (context, idx) {
-              return Container(
-                height: 120,
-                width: 350,
-                margin: const EdgeInsets.only(top: 16),
-                padding: const EdgeInsets.only(left: 16, right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(23),
-                  color: Colors.white,
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 100,
-                      width: 100,
-                      // margin: EdgeInsets.only(bottom: 10),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          color: Colors.red),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 3,
+                itemBuilder: (context, idx) {
+                  return badges.Badge(
+                    //stackFit: StackFit.passthrough,
+                    position: badges.BadgePosition.topEnd(top: 18, end: 42),
+                    badgeStyle: const badges.BadgeStyle(
+                      shape: badges.BadgeShape.square,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(8),
+                        bottomRight: Radius.circular(8),
+                      ),
+                      badgeColor: Color.fromRGBO(25, 33, 38, 1),
                     ),
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Container(
-                              height: 19,
-                              width: 81,
-                              color: Colors.black,
-                            )
-                          ],
+                    badgeContent: Container(
+                      alignment: Alignment.center,
+                      height: 19,
+                      width: 81,
+                      child: Text(
+                        "Beginner",
+                        style: GoogleFonts.lato(
+                          fontSize: 14,
+                          color: const Color.fromARGB(255, 255, 255, 255),
                         ),
-                        Container(
-                          width: 209,
-                          height: 16,
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              );
-            }))
+                      ),
+                    ),
+                    child: Container(
+                      height: 120,
+                      width: 350,
+                      margin: const EdgeInsets.only(top: 16),
+                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(23),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 100,
+                            width: 100,
+                            margin: const EdgeInsets.only(right: 10),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(16),
+                              child: Image.asset(
+                                "assets/images/plan$idx.png",
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(),
+                              Text(
+                                "Today Plan",
+                                style: GoogleFonts.lato(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  color: const Color.fromRGBO(25, 33, 38, 1),
+                                ),
+                              ),
+                              Text(
+                                "100 Push up a day",
+                                style: GoogleFonts.lato(
+                                  fontSize: 14,
+                                  color: const Color.fromRGBO(25, 33, 38, 0.5),
+                                ),
+                              ),
+                              LinearPercentIndicator(
+                                width: 188,
+                                padding: const EdgeInsets.only(right: 1),
+                                lineHeight: 16,
+                                percent: 0.75,
+                                barRadius: const Radius.circular(6),
+                                backgroundColor:
+                                    const Color.fromRGBO(242, 242, 242, 1),
+                                progressColor:
+                                    const Color.fromRGBO(187, 242, 70, 1),
+                                center: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 200 *
+                                            (0.75) /
+                                            2), // Calculate position
+                                    child: Text(
+                                      "75 %",
+                                      style: GoogleFonts.lato(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w500,
+                                        color:
+                                            const Color.fromRGBO(25, 33, 38, 1),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
+      ),
+      bottomNavigationBar: PersistentTabView(
+        backgroundColor: const Color.fromRGBO(25, 33, 38, 1),
+        navBarStyle: NavBarStyle.style1,
+        decoration: NavBarDecoration(
+          colorBehindNavBar: Colors.transparent,
+          borderRadius: BorderRadius.circular(32),
+        ),
+        context,
+        screens: [Container(), Container(), Container(), Container()],
+        items: [
+          PersistentBottomNavBarItem(
+            icon: const Icon(
+              Icons.home_filled,
+              color: Colors.black,
+            ),
+            activeColorPrimary: Color.fromARGB(255, 175, 255, 4),
+            activeColorSecondary: Colors.red,
+          ),
+          PersistentBottomNavBarItem(
+            icon: const Icon(Icons.home_filled),
+          ),
+          PersistentBottomNavBarItem(
+            icon: const Icon(Icons.home_filled),
+          ),
+          PersistentBottomNavBarItem(
+            icon: const Icon(Icons.home_filled),
+          ),
+        ],
       ),
     );
   }
