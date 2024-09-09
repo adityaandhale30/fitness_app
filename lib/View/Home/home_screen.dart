@@ -1,8 +1,8 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -222,7 +222,7 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, idx) {
                   return badges.Badge(
                     //stackFit: StackFit.passthrough,
-                    position: badges.BadgePosition.topEnd(top: 18, end: 42),
+                    position: badges.BadgePosition.topEnd(top: 18, end: 16),
                     badgeStyle: const badges.BadgeStyle(
                       shape: badges.BadgeShape.square,
                       borderRadius: BorderRadius.only(
@@ -245,9 +245,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: Container(
                       height: 120,
-                      width: 350,
+                      width: double.maxFinite,
                       margin: const EdgeInsets.only(top: 16),
-                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      // padding: const EdgeInsets.only(left: 16, right: 16),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(23),
                         color: Colors.white,
@@ -327,34 +327,58 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: PersistentTabView(
-        backgroundColor: const Color.fromRGBO(25, 33, 38, 1),
-        navBarStyle: NavBarStyle.style1,
-        decoration: NavBarDecoration(
-          colorBehindNavBar: Colors.transparent,
-          borderRadius: BorderRadius.circular(32),
-        ),
-        context,
-        screens: [Container(), Container(), Container(), Container()],
-        items: [
-          PersistentBottomNavBarItem(
-            icon: const Icon(
-              Icons.home_filled,
-              color: Colors.black,
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.circular(24),
+        child: const GNav(
+          backgroundColor: Color.fromRGBO(25, 33, 38, 1),
+          curve: Curves.easeIn,
+          iconSize: 24,
+          tabs: [
+            GButton(
+              active: true,
+              text: " Home",
+              icon: Icons.home,
+              iconColor: Colors.white,
+              iconActiveColor: Colors.black,
+              backgroundColor: Color.fromRGBO(187, 242, 70, 1),
+              padding:
+                  EdgeInsets.only(top: 14, bottom: 14, left: 24, right: 24),
+              margin: EdgeInsets.all(8),
             ),
-            activeColorPrimary: Color.fromARGB(255, 175, 255, 4),
-            activeColorSecondary: Colors.red,
-          ),
-          PersistentBottomNavBarItem(
-            icon: const Icon(Icons.home_filled),
-          ),
-          PersistentBottomNavBarItem(
-            icon: const Icon(Icons.home_filled),
-          ),
-          PersistentBottomNavBarItem(
-            icon: const Icon(Icons.home_filled),
-          ),
-        ],
+            GButton(
+              active: true,
+              text: " Explore",
+              icon: Icons.rocket_launch_outlined,
+              iconColor: Colors.white,
+              iconActiveColor: Colors.black,
+              backgroundColor: Color.fromRGBO(187, 242, 70, 1),
+              padding:
+                  EdgeInsets.only(top: 14, bottom: 14, left: 24, right: 24),
+            ),
+            GButton(
+              active: true,
+              text: " Analytics",
+              icon: Icons.analytics_outlined,
+              iconColor: Colors.white,
+              iconActiveColor: Colors.black,
+              backgroundColor: Color.fromRGBO(187, 242, 70, 1),
+              padding:
+                  EdgeInsets.only(top: 14, bottom: 14, left: 24, right: 24),
+              // margin: EdgeInsets.all(8),
+            ),
+            GButton(
+              active: true,
+              text: " Profile",
+              icon: Icons.person_2_outlined,
+              iconColor: Colors.white,
+              iconActiveColor: Colors.black,
+              backgroundColor: Color.fromRGBO(187, 242, 70, 1),
+              padding:
+                  EdgeInsets.only(top: 14, bottom: 14, left: 24, right: 24),
+              margin: EdgeInsets.only(right: 8),
+            ),
+          ],
+        ),
       ),
     );
   }
