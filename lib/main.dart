@@ -1,4 +1,4 @@
-import 'package:fitness_app/View/Home/home_screen.dart';
+import 'package:fitness_app/View/Explore/explore_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +13,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: ExploreScreen(
+        
+      ),
     );
   }
 }
