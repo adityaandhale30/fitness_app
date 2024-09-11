@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,6 +10,9 @@ class ExploreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log(MediaQuery.of(context).size.height.toString());
+      double screenHeight =  MediaQuery.of(context).size.height;
+    log(MediaQuery.of(context).size.width.toString());
     return Scaffold(
       backgroundColor: const Color.fromRGBO(247, 246, 250, 1),
       body: SingleChildScrollView(
@@ -31,7 +36,7 @@ class ExploreScreen extends StatelessWidget {
                     child: Stack(
                       children: [
                         SizedBox(
-                          height: 200,
+                          height: screenHeight *0.225,
                           child: ShaderMask(
                             //   blendMode: BlendMode.dst,
                             shaderCallback: (bounds) {
@@ -340,7 +345,7 @@ class ExploreScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
         child: const GNav(
           backgroundColor: Color.fromRGBO(25, 33, 38, 1),
-          curve: Curves.easeIn,
+          curve: Curves.easeOutExpo,
           iconSize: 24,
           tabs: [
             GButton(

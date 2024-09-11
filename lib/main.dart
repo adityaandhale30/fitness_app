@@ -1,8 +1,12 @@
-import 'package:fitness_app/View/Explore/explore_screen.dart';
+import 'package:fitness_app/View/Activity/activity_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/date_symbol_data_file.dart';
 
-void main() {
+Future<void> main() async {
+  // WidgetsFlutterBinding
+  //     .ensureInitialized(); // Ensures Flutter binding is initialized before any async operations
+  // await initializeDateFormatting('en', "");
   runApp(const MainApp());
 }
 
@@ -13,9 +17,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ExploreScreen(
-        
-      ),
+      home: ActivityScreen(),
     );
   }
 }
