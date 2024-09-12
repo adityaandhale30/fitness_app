@@ -1,7 +1,7 @@
 import 'package:fitness_app/View/Activity/activity_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/date_symbol_data_file.dart';
+
 
 Future<void> main() async {
   // WidgetsFlutterBinding
