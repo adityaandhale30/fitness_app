@@ -1,4 +1,5 @@
 import 'package:fitness_app/View/Activity/activity_screen.dart';
+import 'package:fitness_app/View/Workout/workout_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +18,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ActivityScreen(),
+      home: WorkoutScreen(),
     );
   }
 }

@@ -1,4 +1,3 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -281,7 +280,10 @@ List<Container> staggeredContainer = [
             ),
           ],
         ),
-        Container(),
+        const SizedBox(
+          height: 16,
+        ),
+        Image.asset("assets/images/sleep_bar.png")
       ],
     ),
   ),
@@ -320,39 +322,10 @@ List<Container> staggeredContainer = [
             ),
           ],
         ),
-        Container(
-          height: 68,
-          width: 280,
-          child: BarChart(
-            BarChartData(
-              rangeAnnotations: null,
-              gridData: null,
-                // read about it in the BarChartData section
-                barGroups: [BarChartGroupData(
-          x: 0,
-          barRods: [
-            BarChartRodData(
-              toY: 8,
-       
-            ),
-            BarChartRodData(
-              toY: 4,
-       
-            ),
-            BarChartRodData(
-              toY: 1,
-       
-            ),
-          ],
-        
+        const SizedBox(
+          height: 10,
         ),
-       
-         
-        ]),
-            swapAnimationDuration: Duration(milliseconds: 150), // Optional
-            swapAnimationCurve: Curves.linear, // Optional
-          ),
-        ),
+        Image.asset("assets/images/water.png")
       ],
     ),
   ),
