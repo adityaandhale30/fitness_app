@@ -1,13 +1,13 @@
-import 'package:fitness_app/View/Activity/activity_screen.dart';
 import 'package:fitness_app/View/Workout/workout_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 Future<void> main() async {
   // WidgetsFlutterBinding
   //     .ensureInitialized(); // Ensures Flutter binding is initialized before any async operations
-  // await initializeDateFormatting('en', "");
+  //     debugPrintRebuildDirtyWidgets = true;
+
+
   runApp(const MainApp());
 }
 
