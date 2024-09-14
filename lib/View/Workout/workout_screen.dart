@@ -1,6 +1,7 @@
 import 'package:fitness_app/View/Workout/Widget/rounds_list.dart';
 import 'package:fitness_app/View/Workout/Widget/workout_stack.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WorkoutScreen extends StatelessWidget {
@@ -14,6 +15,16 @@ class WorkoutScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 6, 8, 9),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new_outlined,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Get.back();
+          },
+        ),
         backgroundColor: const Color.fromARGB(255, 8, 11, 12),
         title: Text(
           "Workout",
@@ -30,7 +41,7 @@ class WorkoutScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          const  WorkoutStack(),
+            const WorkoutStack(),
             const SizedBox(
               height: 46,
             ),
