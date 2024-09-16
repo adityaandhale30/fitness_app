@@ -7,12 +7,13 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class TodaysPlanContainer extends StatelessWidget {
   const TodaysPlanContainer({super.key});
+ // int.pas
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Flexible(
       child: ListView.builder(
-        itemCount: 3,
+        itemCount: 5,
         itemBuilder: (context, idx) {
           return GestureDetector(
             onTap: () {

@@ -1,4 +1,6 @@
+import 'package:fitness_app/View/botton_navigation_custom.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -51,7 +53,9 @@ class SplashScreen extends StatelessWidget {
             height: 60,
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.off(const BottomNavigationBarCustom());
+            },
             child: Container(
               height: 56,
               width: screenWidth,
