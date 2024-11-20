@@ -1,6 +1,7 @@
 import 'package:fitness_app/View/Activity/staggered_container.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:weekly_calendar/weekly_calendar.dart';
 
 class ActivityScreen extends StatelessWidget {
   const ActivityScreen({super.key});
@@ -14,14 +15,24 @@ class ActivityScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // HorizontalCalendar(
-              //   date: DateTime.now(),
-              //   textColor: Colors.black45,
-              //   backgroundColor: Colors.white,
-              //   selectedColor: Colors.blue,
-              //   showMonth: true,
-              //   onDateSelected: (date) {},
-              // ),
+              SizedBox(
+                height: 200,
+                width: double.maxFinite,
+                child: const WeeklyCalendar(
+                  calendarStyle: CalendarStyle(
+                    locale: "en",
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.all(Radius.circular(14)),
+                    ),
+                    headerDateTextAlign: Alignment.centerLeft,
+                    headerDateTextColor: Colors.white,
+                    footerDateTextColor: Colors.grey,
+                    isShowFooterDateText: true,
+                  ),
+                ),
+              ),
               const SizedBox(
                 height: 150,
               ),
@@ -79,7 +90,6 @@ class ActivityScreen extends StatelessWidget {
           ),
         ),
       ),
-     
     );
   }
 }

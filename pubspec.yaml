@@ -7,25 +7,21 @@ environment:
   sdk: '>=3.4.4 <4.0.0'
 
 dependencies:
-  # audio_waveforms: ^1.0.5
   badges: ^3.1.2
-  bottom_navy_bar: ^6.1.0
   carousel_slider: ^4.2.1
   fl_chart: ^0.69.0
   flutter:
     sdk: flutter
-  flutter_staggered_grid_view: ^0.7.0
   get: ^4.6.6
   google_fonts: ^6.2.1
   google_nav_bar: ^5.0.6
-  horizontal_calendar: ^1.1.1
   horizontal_week_calendar: ^0.0.7
-  horizontalcalender: ^0.0.4
-  intl: ^0.17.0
+  intl: ^0.19.0
   percent_indicator: ^4.2.3
   persistent_bottom_nav_bar: ^6.2.1
   simple_waveform_progressbar: ^0.0.3
   syncfusion_flutter_gauges: ^21.2.4
+  weekly_calendar: ^0.1.2
 
 dev_dependencies:
   flutter_test:

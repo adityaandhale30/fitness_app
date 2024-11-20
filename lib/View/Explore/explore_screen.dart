@@ -12,7 +12,6 @@ class ExploreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log(MediaQuery.of(context).size.height.toString());
     double screenHeight = MediaQuery.of(context).size.height;
     log(MediaQuery.of(context).size.width.toString());
     return Scaffold(

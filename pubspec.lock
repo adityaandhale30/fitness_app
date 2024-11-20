@@ -17,14 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
-  auto_size_text:
-    dependency: transitive
-    description:
-      name: auto_size_text
-      sha256: "3f5261cd3fb5f2a9ab4e2fc3fba84fd9fcaac8821f20a1d4e71f557521b22599"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.0"
   badges:
     dependency: "direct main"
     description:
@@ -41,14 +33,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
-  bottom_navy_bar:
-    dependency: "direct main"
-    description:
-      name: bottom_navy_bar
-      sha256: ed54e0a18748106cc4d3648390bf94e88c0913db6bd3018dd30ab0810f0c26d6
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.1.0"
   carousel_slider:
     dependency: "direct main"
     description:
@@ -134,14 +118,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.2"
-  flutter_staggered_grid_view:
-    dependency: "direct main"
-    description:
-      name: flutter_staggered_grid_view
-      sha256: "19e7abb550c96fbfeb546b23f3ff356ee7c59a019a651f8f102a4ba9b7349395"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.7.0"
   flutter_svg:
     dependency: transitive
     description:
@@ -179,14 +155,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.6"
-  horizontal_calendar:
-    dependency: "direct main"
-    description:
-      name: horizontal_calendar
-      sha256: "1927cc6d305002ac606410372b4ce957b2c58b8c4054b4275fbc4f29a594ad83"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.1"
   horizontal_week_calendar:
     dependency: "direct main"
     description:
@@ -195,14 +163,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.7"
-  horizontalcalender:
-    dependency: "direct main"
-    description:
-      name: horizontalcalender
-      sha256: f6aba33147e6fe750140c0179210360f11703f12c1f92fb1f16f587012c5e06c
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.4"
   http:
     dependency: transitive
     description:
@@ -223,10 +183,10 @@ packages:
     dependency: "direct main"
     description:
       name: intl
-      sha256: "910f85bce16fb5c6f614e117efa303e85a1731bb0081edf3604a2ae6e9a3cc91"
+      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
       url: "https://pub.dev"
     source: hosted
-    version: "0.17.0"
+    version: "0.19.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -283,14 +243,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.12.0"
-  nepali_utils:
-    dependency: transitive
-    description:
-      name: nepali_utils
-      sha256: d337674d88a644058e964e1124151eea27917201564f10ce3de9ab71c2885e16
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.6"
   path:
     dependency: transitive
     description:
@@ -528,6 +480,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  weekly_calendar:
+    dependency: "direct main"
+    description:
+      name: weekly_calendar
+      sha256: "37f245a3f1c28c67465f761eabd8a19b34bc47c893430a08a223e165d7971ace"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.2"
   xdg_directories:
     dependency: transitive
     description:

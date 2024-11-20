@@ -1,4 +1,4 @@
-import 'package:fitness_app/View/botton_navigation_custom.dart';
+
 import 'package:fitness_app/View/splashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
