@@ -37,7 +37,7 @@ class ActivityScreen extends StatelessWidget {
                 height: 150,
               ),
               Text(
-                "Today Report",
+                "Today Report ",
                 style: GoogleFonts.lato(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
