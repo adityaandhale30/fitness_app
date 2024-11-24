@@ -33,7 +33,8 @@ class ActivityScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
+              const SizedBox
+              (  
                 height: 150,
               ),
               Text(
