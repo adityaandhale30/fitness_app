@@ -230,7 +230,7 @@ List<Container> staggeredContainer = [
     ),
   ),
   Container(
-    height: 51,
+    height: 50,
     width: 160,
     alignment: Alignment.center,
     margin: const EdgeInsets.only(left: 2, top: 8),
